@@ -10,12 +10,6 @@ function moviesApi(app) {
     const auth = req.body.akelab;
     const token = 123456789;
 
-    if (!auth)
-      res.status(401).json({
-        data: [],
-        mensaje: "La variable Akelab no existe.",
-      });
-
     if (auth != token)
       res.status(401).json({
         data: [],
